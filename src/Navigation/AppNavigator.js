@@ -1,8 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import React from "react";
-import AxeDetail from "../AxeDetailScreen";
-import Home from "../HomeScreen";
-import Trajet from "../TrajetScreen";
+import AxeDetail from "../screens/AxeDetailScreen";
+import Home from "../screens/HomeScreen";
+import Trajet from "../screens/TrajetScreen";
 
 const Stack = createNativeStackNavigator();
 
