@@ -20,3 +20,4 @@ export const colors ={
       pressed: '#E8E8E8'
 
 }
+export default colors;

@@ -3,15 +3,12 @@ import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { busAxes } from '../data/busAxe';
 import AxeCard from '../components/home/AxeCard';
-import { colors } from '../styles/colors';
+import themes from '../styles/themes';
 
 const HomeScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <View style={styles.headerIcon}>
-          <Text style={styles.headerIconText}>🚌</Text>
-        </View>
         <View>
           <Text style={styles.headerTitle}>TransportU</Text>
           <Text style={styles.headerSubtitle}>Gare Universitaire UAM - Niamey</Text>
@@ -41,41 +38,28 @@ const HomeScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.background
+    backgroundColor: themes.colors.primary
   },
   header: {
+    alignContent: 'center',
+    justifyContent: 'center',
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: colors.surface,
-    paddingHorizontal: 20,
-    paddingVertical: 16,
-    shadowColor: colors.shadow,
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3
-  },
-  headerIcon: {
-    width: 48,
-    height: 48,
-    borderRadius: 12,
-    backgroundColor: colors.primary,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginRight: 12
-  },
-  headerIconText: {
-    fontSize: 24
+    backgroundColor: themes.colors.primaryDark,
+    padding: themes.spacing.md,
+    paddingBottom: themes.spacing.lg,
+    marginBottom: themes.spacing.md,
+    ...themes.shadows.md
   },
   headerTitle: {
-    fontSize: 22,
+    fontSize: themes.typography.h2.fontSize,
     fontWeight: 'bold',
-    color: colors.text.primary
+    color: themes.colors.text
   },
   headerSubtitle: {
-    fontSize: 13,
-    color: colors.text.secondary,
-    marginTop: 2
+    fontSize: themes.typography.bodySmall.fontSize,
+    color: themes.colors.text,
+    marginTop: themes.spacing.xs
   },
   content: {
     flex: 1
@@ -84,23 +68,18 @@ const styles = StyleSheet.create({
     margin: 16,
     marginBottom: 8,
     padding: 20,
-    backgroundColor: colors.surface,
+    backgroundColor: themes.colors.primary,
     borderRadius: 20,
-    shadowColor: colors.shadow,
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 8,
-    elevation: 3
   },
   welcomeTitle: {
     fontSize: 20,
     fontWeight: '700',
-    color: colors.text.primary,
+    color: themes.colors.text,
     marginBottom: 6
   },
   welcomeSubtitle: {
     fontSize: 14,
-    color: colors.text.secondary
+    color: themes.colors.text
   },
   footer: {
     height: 20

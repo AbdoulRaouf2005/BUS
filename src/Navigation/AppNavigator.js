@@ -8,9 +8,15 @@ const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
       return (
             <Stack.Navigator initialRouteName="Home" >
-                  <Stack.Screen name="Home" component={Home} />
-                  <Stack.Screen name="AxeDetail" component={AxeDetail} />
-                  <Stack.Screen name="Trajet" component={Trajet} />
+                  <Stack.Screen name="Home" options={{
+                        headerShown: false,
+                  }} component={Home} />
+                  <Stack.Screen name="AxeDetail" options={{
+                        headerShown: false,
+                  }} component={AxeDetail} />
+                  <Stack.Screen name="Trajet" options={{
+                        headerShown: false,
+                  }} component={Trajet} />
             </Stack.Navigator>
       );
 };
