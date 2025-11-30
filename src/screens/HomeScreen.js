@@ -20,7 +20,6 @@ const HomeScreen = ({ navigation }) => {
           <Text style={styles.welcomeTitle}>Choisissez votre destination</Text>
           <Text style={styles.welcomeSubtitle}>4 axes disponibles depuis la gare UAM</Text>
         </View>
-        
         {busAxes.map(axe => (
           <AxeCard
             key={axe.id}
