@@ -1,7 +1,11 @@
 import { colors } from "./colors";
 
-const theme = {
-      colors,
+export const themes = {
+      colors: {
+            ...colors,
+            cardBackground: colors.surface,
+            textSecondary: colors.text.secondary
+      },
       spacing:{
             xs:4,
             sm:8,
@@ -20,7 +24,7 @@ const theme = {
             h1:{
                   fontSize: 28,
                   fontWeight: 'bold',
-                  color: colors.text,
+                  color: colors.text.primary,
                   lineHeight: 34
             },
             h2:{
@@ -42,12 +46,12 @@ const theme = {
             },
             bodySmall:{
                   fontSize: 14,
-                  color: colors.textSecondary,
+                  color: colors.text,
                   lineHeight: 20
             },
             caption: {
                   fontSize: 12,
-                  color: colors.textSecondary,
+                  color: colors.text,
                   lineHeight: 16
             }
       },
@@ -74,5 +78,6 @@ const theme = {
                   elevation:8
             }
       }
-}
-export default theme;
+};
+
+export default themes;

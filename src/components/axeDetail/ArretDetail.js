@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { themes } from '../../styles/themes';
 
-const AxeCard = ({ axe, onPress }) => {
+const ArretDetail = ({ heure, onPress }) => {
   return (
     <TouchableOpacity
       style={styles.card}
@@ -10,20 +10,8 @@ const AxeCard = ({ axe, onPress }) => {
       activeOpacity={0.8}
     >
       <View style={{ borderRadius: themes.borderRadius.md }}>
-        <Text style={themes.typography.h2}>{axe.name}</Text>
+        <Text style={themes.typography.h2}>{heure}</Text>
       </View>
-<<<<<<< HEAD
-      
-      <View style={styles.content}>
-        <Text style={styles.title}>{axe.name}</Text>
-        <View style={styles.footer}>
-          <Text style={styles.info}>Nombre d&apos;Arret : {axe.stops.length}</Text>
-        </View>
-      </View>
-      
-      <Text style={styles.arrow}>›</Text>
-=======
->>>>>>> origin/Frontend
     </TouchableOpacity>
   );
 };
@@ -42,4 +30,4 @@ const styles = StyleSheet.create({
   
 });
 
-export default AxeCard;
+export default ArretDetail;
