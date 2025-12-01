@@ -2,12 +2,7 @@ import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import AxeCard from '../components/home/AxeCard';
-<<<<<<< HEAD
-import { busAxes } from '../data/busAxe';
-import { colors } from '../styles/colors';
-=======
 import themes from '../styles/themes';
->>>>>>> origin/Frontend
 
 const HomeScreen = ({ navigation }) => {
   return (
@@ -20,14 +15,10 @@ const HomeScreen = ({ navigation }) => {
       </View>
 
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
-<<<<<<< HEAD
-        
-=======
         <View style={styles.welcomeCard}>
           <Text style={styles.welcomeTitle}>Choisissez votre destination</Text>
           <Text style={styles.welcomeSubtitle}>4 axes disponibles depuis la gare UAM</Text>
         </View>
->>>>>>> origin/Frontend
         {busAxes.map(axe => (
           <AxeCard
             key={axe.id}

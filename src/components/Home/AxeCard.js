@@ -12,18 +12,6 @@ const AxeCard = ({ axe, onPress }) => {
       <View style={{ borderRadius: themes.borderRadius.md }}>
         <Text style={themes.typography.h2}>{axe.name}</Text>
       </View>
-<<<<<<< HEAD
-      
-      <View style={styles.content}>
-        <Text style={styles.title}>{axe.name}</Text>
-        <View style={styles.footer}>
-          <Text style={styles.info}>Nombre d&apos;Arret : {axe.stops.length}</Text>
-        </View>
-      </View>
-      
-      <Text style={styles.arrow}>›</Text>
-=======
->>>>>>> origin/Frontend
     </TouchableOpacity>
   );
 };
