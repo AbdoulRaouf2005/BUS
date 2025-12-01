@@ -15,10 +15,8 @@ const AxeCard = ({ axe, onPress }) => {
       
       <View style={styles.content}>
         <Text style={styles.title}>{axe.name}</Text>
-        <Text style={styles.description}>{axe.description}</Text>
         <View style={styles.footer}>
-          <Text style={styles.info}>🕐 {axe.schedules.length} départs</Text>
-          <Text style={styles.info}>⏱️ {axe.duration}</Text>
+          <Text style={styles.info}>Nombre d&apos;Arret : {axe.stops.length}</Text>
         </View>
       </View>
       

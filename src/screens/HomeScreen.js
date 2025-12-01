@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { busAxes } from '../data/busAxe';
 import AxeCard from '../components/home/AxeCard';
+import { busAxes } from '../data/busAxe';
 import { colors } from '../styles/colors';
 
 const HomeScreen = ({ navigation }) => {
@@ -13,16 +13,12 @@ const HomeScreen = ({ navigation }) => {
           <Text style={styles.headerIconText}>🚌</Text>
         </View>
         <View>
-          <Text style={styles.headerTitle}>TransportU</Text>
+          <Text style={styles.headerTitle}>Arret Bus</Text>
           <Text style={styles.headerSubtitle}>Gare Universitaire UAM - Niamey</Text>
         </View>
       </View>
 
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
-        <View style={styles.welcomeCard}>
-          <Text style={styles.welcomeTitle}>Choisissez votre destination</Text>
-          <Text style={styles.welcomeSubtitle}>4 axes disponibles depuis la gare UAM</Text>
-        </View>
         
         {busAxes.map(axe => (
           <AxeCard
