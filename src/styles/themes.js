@@ -1,6 +1,6 @@
 import { colors } from "./colors";
 
-export const themes = {
+const themes = {
       colors: {
             ...colors,
             cardBackground: colors.surface,
